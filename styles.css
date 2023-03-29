@@ -1,0 +1,245 @@
+:root {
+  --color-1: #1d3557;
+  --color-2: #457b9d;
+  --color-3: #a8dadc;
+  --color-4: #f1faee;
+  --color-5: #e63946;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-1);
+  color: var(--color-4);
+}
+
+/* Introduction */
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-2);
+  width: 90%;
+  max-width: 95%;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  border-radius: 1.2rem;
+  box-shadow: 0.7rem 0.7rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+.description .text {
+  font-size: 1.5rem;
+}
+
+.introduction .title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.introduction .description {
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  font-weight: 300;
+}
+.description h3 {
+  margin: 1rem 0;
+}
+
+.introduction .game-example {
+  border-radius: 1.2rem;
+  box-shadow: 0.7rem 0.7rem 0.3rem rgba(0, 0, 0, 0.4);
+  margin: 0 1rem;
+  width: 95%;
+
+  object-fit: cover;
+}
+/* End of Introduction */
+
+/* Form container */
+.form-container {
+  background-color: var(--color-2);
+  width: 90%;
+  margin: 3rem auto;
+  padding: 3rem 1rem;
+  border-radius: 1.2rem;
+  box-shadow: 0.7rem 0.7rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--color-4);
+  font-weight: 600;
+  padding: 0 1rem;
+}
+.form .player-data {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 3rem 1rem;
+}
+.form .btn-container {
+  width: 100%;
+  text-align: right;
+}
+.word,
+.player-1,
+.player-2 {
+  display: flex;
+  align-items: center;
+}
+.form .input {
+  margin-left: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 1.2rem;
+  border: 2px solid var(--color-4);
+  font-family: inherit;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.7);
+}
+
+.form .btn-container .btn {
+  background-color: var(--color-5);
+  color: var(--color-4);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+/* End of Form container */
+
+/* Player container */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+main .word {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.5);
+  margin: 2rem 3rem;
+  padding: 1rem 2rem;
+  border-radius: 1.2rem;
+  background-color: var(--color-4);
+  color: var(--color-5);
+}
+main .playground {
+  background-color: var(--color-2);
+  width: 90%;
+  margin: 3rem auto;
+  padding: 3rem 1rem;
+  border-radius: 1.2rem;
+  box-shadow: 0.7rem 0.7rem 0.3rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+main .playground .word-score {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
+}
+main .playground .word-score .static {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+main .playground .word-score .words {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+main .playground .word-score .score {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+main .playground .player-name {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: var(--color-4);
+  width: 90%;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-4);
+}
+main .playground .total {
+  font-size: 2rem;
+}
+main .author {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+main .winner {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  background-color: var(--color-5);
+  padding: 2rem 3rem;
+  border-radius: 0.3rem;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+main .winner span {
+  font-weight: 700;
+}
+/* End of Player container */
+
+@media only screen and (min-width: 1000px) {
+  .introduction,
+  .form-container,
+  main .playground {
+    width: 80rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .form .player-data {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form .player-1,
+  .form .player-2 {
+    margin: 3rem 0;
+  }
+  .form .btn-container .btn {
+    font-size: 2rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .description {
+    width: 90%;
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minion Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Introduction to game rules -->
+    <div class="introduction">
+      <h1 class="title">The minion game</h1>
+      <div class="description">
+        <div class="text">
+          <p>Kevin and Stuart want to play the 'The Minion Game'.</p>
+        </div>
+        <div class="text">
+          <h3>Game Rules</h3>
+          <ul>
+            <li>Both players are given the same string, S</li>
+            <li>
+              Both players have to make substrings using the letters of the
+              string <em>S</em>
+            </li>
+            <li>Stuart has to make words starting with consonants</li>
+            <li>Kevin has to make words starting with vowels.</li>
+            <li>
+              The game ends when both players have made all possible substrings.
+            </li>
+          </ul>
+        </div>
+        <div class="text">
+          <h3>Scoring</h3>
+          <p>
+            A player gets +1 point for each occurrence of the substring in the
+            string <em>S</em>
+          </p>
+        </div>
+        <div class="text">
+          <h3>For Example:</h3>
+          <ul>
+            <li>String S = BANANA</li>
+            <li>Kevin's vowel beginning word = ANA</li>
+            <li>
+              Here, ANA occurs twice in BANANA. Hence, Kevin will get 2 Points.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img
+        src="./banana-example.PNG"
+        alt="banana example"
+        class="game-example"
+        width="600px"
+      />
+    </div>
+    <!-- End of introduction -->
+
+    <!-- Form container -->
+    <div class="form-container">
+      <!-- Form -->
+      <form class="form">
+        <div class="word">
+          <label for="word">word</label>
+          <input
+            id="word"
+            placeholder="Enter your word"
+            type="text"
+            maxlength="15"
+            class="input"
+            required
+          />
+        </div>
+        <div class="player-data">
+          <div class="player-1">
+            <label for="player-1__name">player 1</label>
+            <input
+              id="player-1__name"
+              placeholder="Consonent player"
+              type="text"
+              maxlength="15"
+              class="input"
+              required
+            />
+          </div>
+          <div class="player-2">
+            <label for="player-2__name">player 2</label>
+            <input
+              id="player-2__name"
+              placeholder="Vowel player"
+              type="text"
+              maxlength="15"
+              class="input"
+              required
+            />
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="btn" type="submit">submit</button>
+        </div>
+      </form>
+      <!-- End of Form -->
+    </div>
+    <!-- End of form container -->
+    <!-- Game playground -->
+    <main>
+      <h1 class="word" id="user-entered-word">loading...</h1>
+      <section class="player-1__section playground">
+        <h2 class="player-name" id="consonant-player"></h2>
+        <div class="word-score">
+          <div class="words words__consonant-player">
+            <div class="static">words</div>
+          </div>
+          <div class="score score__consonant-player">
+            <div class="static">score</div>
+          </div>
+        </div>
+        <div id="consonant-player-total" class="total">total: 0</div>
+      </section>
+      <section class="player-2__section playground">
+        <h2 class="player-name" id="vowel-player"></h2>
+        <div class="word-score">
+          <div class="words words__vowel-player">
+            <div class="static">words</div>
+          </div>
+          <div class="score score__vowel-player">
+            <div class="static">score</div>
+          </div>
+        </div>
+        <div id="vowel-player-total" class="total">total: 0</div>
+      </section>
+      <div class="winner"><span>winner:</span> loading...</div>
+      <div class="author">&copy; 2023 designed by Sheane mario</div>
+    </main>
+    <!-- End of game playground -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
